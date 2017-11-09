@@ -78,3 +78,79 @@ Guess the number that I'm thinking of. 1
 Wrong, guess again!
 Guess the number that I'm thinking of. 8
 You got it! The number is  8
+
+
+__________________________________
+#I didn't exactly follow the instruction about the count, but I like my method better.
+
+import random
+
+def guess_game():
+    a = random.randint(1, 9)
+    guess = int(input('Guess the number that I\'m thinking of. '))
+    count = 0
+    while a != guess:
+        if guess < a:
+            print('Too low.')
+            guess = int(input('Guess again. '))
+            count += 1
+        if guess > a:
+            print('Too high.')
+            guess = int(input('Guess again. '))
+            count += 1
+    else: 
+        print('You got it! The number is ', a)
+        count += 1
+    print('It took', count, 'number of guesses.')
+        
+answer = 'YES'
+
+while answer != 'EXIT':
+    guess_game()
+    answer = input('Type \'EXIT\' if you want to stop the game. ')
+    answer = answer.upper()
+else:
+    print('Thanks for playing.')
+
+
+Outcome:
+
+Guess the number that I'm thinking of. 1
+Too low.
+Guess again. 4
+Too low.
+Guess again. 6
+Too low.
+Guess again. 8
+Too low.
+Guess again. 9
+You got it! The number is  9
+It took 5 number of guesses.
+Type 'EXIT' if you want to stop the game. no
+Guess the number that I'm thinking of. 1
+Too low.
+Guess again. 5
+Too low.
+Guess again. 8
+You got it! The number is  8
+It took 3 number of guesses.
+Type 'EXIT' if you want to stop the game. yes
+Guess the number that I'm thinking of. 5
+Too high.
+Guess again. 3
+Too high.
+Guess again. 2
+Too high.
+Guess again. 1
+You got it! The number is  1
+It took 4 number of guesses.
+Type 'EXIT' if you want to stop the game. exit
+Thanks for playing.
+
+
+
+
+
+
+
+
