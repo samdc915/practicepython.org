@@ -14,7 +14,13 @@ age_100 = str(100 - age)
 
 print(name + ', You will turn 100 in ' + age_100 + ' years.')
 
+Output:
 
+What is your name? Sam
+How old are you, Sam? 20
+Sam, You will turn 100 in 80 years.
+
+_______________________________________________________________
 
 name = input('What is your name? ')
 age = int(input('How old are you, ' + name + '? '))
@@ -25,3 +31,13 @@ age_100 = str(100 - age)
 while number_times > 0:
     print(name + ', You will turn 100 in ' + age_100 + ' years. ') 
     number_times -= 1
+    
+Output:
+
+What is your name? Sam
+How old are you, Sam? 20
+Enter a random number: 4
+Sam, You will turn 100 in 80 years. 
+Sam, You will turn 100 in 80 years. 
+Sam, You will turn 100 in 80 years. 
+Sam, You will turn 100 in 80 years. 
