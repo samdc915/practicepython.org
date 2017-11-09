@@ -1,0 +1,12 @@
+# String Lists
+# Exercise 6 (and Solution)
+# Ask the user for a string and print out whether this string is a palindrome or not. 
+# (A palindrome is a string that reads the same forwards and backwards.)
+
+word = input('Enter a word: ')
+palindrome_check = word[::-1]
+
+if word == palindrome_check:
+    print('That\'s a palindrome.')
+else:
+    print('That word is not a palindrome.')
