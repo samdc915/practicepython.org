@@ -33,3 +33,58 @@ Output:
 Player 1, enter your play: rock
 Player 2, enter your play: paper
 Player 2 wins!
+
+
+__________________________________
+
+I wrote this much more complicated code on 5/10/2017
+
+def play_game():
+    print('This game is rock, paper, scissors. This is a two-player game.')
+    print('To play, the game will ask for the player\'s names.')
+    print('Then, the player will either enter R for rock, P for paper, S for scissors.')
+    print('If you have the same hand, then you must play over.')
+    print('Rock smashes scissors. Paper wraps around a rock. Scissors cut paper.')
+    print('Enjoy!')
+    user_1 = input('what is your name, player 1?: ')
+    user_2 = input('what is your name, player 2?: ')
+    Hand_1 = input(user_1 + ", enter your play (R, P, or S): ")
+    Hand_2 = input(user_2 + ', enter your play (R, P, or S): ')
+    hand_1 = Hand_1.lower()
+    hand_2 = Hand_2.lower()
+    while hand_1 == hand_2:
+        print('Tie. Play again.')
+        Hand_1 = input(user_1 + ", enter your play (R, P, or S): ")
+        Hand_2 = input(user_2 + ', enter your play (R, P, or S): ')
+        hand_1 = Hand_1.lower()
+        hand_2 = Hand_2.lower()
+    else:
+        if ((hand_1 == 'r') and (hand_2 == 's')) or ((hand_1 == 'p') and (hand_2 == 'r')) or ((hand_1 == 's')and (hand_2 == 'p')):
+            print(user_1 + ', you win!')
+        else:
+            print(user_2 + ', you win!')
+play_game()
+
+Output:
+
+This game is rock, paper, scissors. This is a two-player game.
+To play, the game will ask for the player's names.
+Then, the player will either enter R for rock, P for paper, S for scissors.
+If you have the same hand, then you must play over.
+Rock smashes scissors. Paper wraps around a rock. Scissors cut paper.
+Enjoy!
+what is your name, player 1?: Sam
+what is your name, player 2?: John
+Sam, enter your play (R, P, or S): R
+John, enter your play (R, P, or S): R
+Tie. Play again.
+Sam, enter your play (R, P, or S): S
+John, enter your play (R, P, or S): S
+Tie. Play again.
+Sam, enter your play (R, P, or S): P
+John, enter your play (R, P, or S): R
+Sam, you win!
+
+
+
+
