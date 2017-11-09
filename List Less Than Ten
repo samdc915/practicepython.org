@@ -24,7 +24,13 @@ while num != 0:
     num = int(input('Add a number to the list. Enter 0 to close the list: '))
 else:
     print('Great, this is your list:', a)
-    print('Now let\'s create a new list of all the numbers less than 5 in ascending order.')
+    print('The numbers less than 5 are: ')
+
+for i in a:
+    if i < 5:
+        print(i)
+        
+print('Now let\'s create a new list of all these numbers in ascending order.')
 
 new_list = []
 
@@ -34,3 +40,5 @@ for i in a:
         
 
 print(sorted(new_list))
+
+
