@@ -1,0 +1,35 @@
+# Rock Paper Scissors   
+# Exercise 8 (and Solution)
+# Make a two-player Rock-Paper-Scissors game. 
+# (Hint: Ask for player plays (using input), compare them, 
+# print out a message of congratulations to the winner, 
+# and ask if the players want to start a new game)
+
+# Remember the rules:
+
+# Rock beats scissors
+# Scissors beats paper
+# Paper beats rock
+
+play_1 = input('Player 1, enter your play: ')
+play_2 = input('Player 2, enter your play: ')
+
+play_1 = play_1.upper()
+play_2 = play_2.upper()
+
+if play_1 == play_2:
+    print('You tied!')
+elif play_1 == 'ROCK' and play_2 == 'SCISSORS':
+    print('Player 1 wins!')
+elif play_1 == 'SCISSORS' and play_2 == 'PAPER':
+    print('Player 1 wins!')
+elif play_1 == 'PAPER' and play_2 == 'ROCK':
+    print('Player 1 wins!')
+else:
+    print('Player 2 wins!')
+    
+Output:
+
+Player 1, enter your play: rock
+Player 2, enter your play: paper
+Player 2 wins!
