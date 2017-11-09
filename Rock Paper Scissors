@@ -36,8 +36,51 @@ Player 2 wins!
 
 
 __________________________________
+# This one asks the players if they want to play again
 
-I wrote this much more complicated code on 5/10/2017
+def game():
+    play_1 = input('Player 1, enter your play: ')
+    play_2 = input('Player 2, enter your play: ')
+
+    play_1 = play_1.upper()
+    play_2 = play_2.upper()
+
+    if play_1 == play_2:
+        print('You tied!')
+    elif play_1 == 'ROCK' and play_2 == 'SCISSORS':
+        print('Player 1 wins!')
+    elif play_1 == 'SCISSORS' and play_2 == 'PAPER':
+        print('Player 1 wins!')
+    elif play_1 == 'PAPER' and play_2 == 'ROCK':
+        print('Player 1 wins!')
+    else:
+        print('Player 2 wins!')
+        
+answer = 'YES'
+
+while answer == 'YES':
+    game()
+    answer = input('Do you want to keep playing? ')
+    answer = answer.upper()
+
+Outcome:
+
+Player 1, enter your play: rock
+Player 2, enter your play: paper
+Player 2 wins!
+Do you want to keep playing? yes
+Player 1, enter your play: rock
+Player 2, enter your play: rock
+You tied!
+Do you want to keep playing? yes
+Player 1, enter your play: scissors
+Player 2, enter your play: rock
+Player 2 wins!
+Do you want to keep playing? no
+
+__________________________________
+
+# I wrote this much more complicated code on 5/10/2017
 
 def play_game():
     print('This game is rock, paper, scissors. This is a two-player game.')
