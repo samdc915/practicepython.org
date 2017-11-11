@@ -6,6 +6,7 @@
 # and last elements of the given list. 
 # For practice, write this code inside a function.
 
+#simple solution
 a = [5, 10, 15, 20, 25]
 b = [a[0], a[-1]]
 b
@@ -14,6 +15,7 @@ b
 Output:
 
 [5, 25]
+
 
 __________________________
 # Using random number of values and list
@@ -36,5 +38,39 @@ This is a list of 24 numbers.
 List = [938344, 162958, 999087, 18007, 510459, 755370, 745997, 742949, 746561, 633317, 584983, 
 707972, 359439, 380624, 189683, 41127, 703473, 103363, 43103, 122897, 412059, 625799, 464847, 579884]
 The first and last values in the list are: [938344, 579884]
+
+
+______________________________
+# someone pointed out on the comment thread
+# about instances when a list could have less than 2 values
+# inside a function
+
+In:
+def first_last_list(lis):
+    if len(lis) >= 2:
+        b = [lis[0], lis[-1]]
+    else: 
+        b = lis
+    return b
+
+a = [5, 10, 15, 20, 25]
+first_last_list(a)
+Out:
+[5, 25]
+In:
+a = [5]
+first_last_list(a)
+Out:
+[5]
+In:
+a = [5]
+b = [a[0], a[-1]]
+b
+Out:
+[5, 5]
+
+# As you can see above, the function handles instances when a list
+# holds less than 2 values as well
+
 
 
