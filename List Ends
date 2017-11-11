@@ -1,0 +1,40 @@
+# List Ends 
+# Exercise 12 
+# Write a program that takes a list of numbers 
+# (for example, a = [5, 10, 15, 20, 25]) 
+# and makes a new list of only the first 
+# and last elements of the given list. 
+# For practice, write this code inside a function.
+
+a = [5, 10, 15, 20, 25]
+b = [a[0], a[-1]]
+b
+
+
+Output:
+
+[5, 25]
+
+__________________________
+# Using random number of values and list
+
+import random
+
+number = random.randint(1, 30)
+print('This is a list of', number, 'numbers.')
+
+a = random.sample(range(1000000), number)
+print('List =', a)
+
+b = [a[0], a[-1]]
+print('The first and last values in the list are:', b)
+
+
+Output:
+
+This is a list of 24 numbers.
+List = [938344, 162958, 999087, 18007, 510459, 755370, 745997, 742949, 746561, 633317, 584983, 
+707972, 359439, 380624, 189683, 41127, 703473, 103363, 43103, 122897, 412059, 625799, 464847, 579884]
+The first and last values in the list are: [938344, 579884]
+
+
