@@ -1,0 +1,53 @@
+# Check Primality Functions   
+# Exercise 11 
+# Ask the user for a number and determine whether the number is prime or not. 
+# (For those who have forgotten, a prime number is a number that has no divisors.). 
+# You can (and should!) use your answer to Exercise 4 to help you. 
+# Take this opportunity to practice using functions, described below.
+
+
+def prime_check(prime):
+    count = 0
+    if prime == 1:
+        print('1 is not a prime.')
+    elif prime == 2:
+        print('2 is a prime.')
+    else:
+        for n in range(2, prime):
+            if prime % n == 0:
+                count += 1 
+        if count >= 1:
+            print(prime, 'is not a prime.')
+        else:
+            print(prime, 'is a prime.')
+
+prime = int(input('Enter a number: '))            
+
+prime_check(prime)            
+            
+            
+Output:
+
+Enter a number: 11
+11 is a prime.
+
+Enter a number: 1
+1 is not a prime.
+
+Enter a number: 2
+2 is a prime.
+
+Enter a number: 3
+3 is a prime.
+
+Enter a number: 4
+4 is not a prime.
+
+Enter a number: 1000000
+1000000 is not a prime.
+
+## My code can't handle really large numbers 
+## so I probably can use half of the prime number for the upper range, 
+## but I can't figure out how to handle the number 4. 
+
+
